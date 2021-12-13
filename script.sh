@@ -20,7 +20,7 @@ PACKAGE_LIST=(
 	'grub2-common'
 	'grub-customizer'
 	'gnome-tweaks'
-	'gnome-starttup-applications'
+	'gnome-startup-applications'
 	'steam'
 	'discord'
 	'lutris'
@@ -30,7 +30,7 @@ PACKAGE_LIST=(
 	'onedriver' # Requires dependancies
 )
 # Install Packages
-for PACKAGE in "{PACKAGE_LIST[@]}"; do
+for PACKAGE in ${PACKAGE_LIST[@]}; do
 	echo "INSTALLING: ${PACKAGE}"
 	apt -y --allow-unauthenticated install "${PACKAGE}"
 done
