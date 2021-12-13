@@ -16,9 +16,6 @@ apt -y --allow-unauthenticated update
 
 # List of packages to be installed
 PACKAGE_LIST=(
-	'grub-efi'
-	'grub2-common'
-	'grub-customizer'
 	'gnome-tweaks'
 	'gnome-startup-applications'
 	'steam'
@@ -36,8 +33,6 @@ for PACKAGE in ${PACKAGE_LIST[@]}; do
 done
 
 timedatectl set-local-rtc 1 # Set time to real time clock (sync for dual boot)
-
-grub-install # start grub
 
 # Update and Upgrade
 apt -y --allow-unauthenticated update 
