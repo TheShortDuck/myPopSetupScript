@@ -14,6 +14,7 @@ curl -fsSL https://download.opensuse.org/repositories/home:jstaf/xUbuntu_21.04/R
 # Update
 apt -y --allow-unauthenticated update
 
+# List of packages to be installed
 PACKAGE_LIST=(
 	'grub-efi'
 	'grub2-common'
