@@ -42,11 +42,7 @@ grub-install # start grub
 apt -y --allow-unauthenticated update 
 apt upgrade -y --allow-unauthenticated
 
-
-sudo nano /etc/sudoers
 echo "${USERNAME} ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
 printf "function acpp() {\ngit add .;\ngit commit -m "\$1";\ngit pull;\ngit push;}" >> ~/.bashrc
 . ~/.bashrc
-
-
