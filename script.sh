@@ -45,5 +45,5 @@ apt upgrade -y --allow-unauthenticated
 
 echo "${USERNAME} ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
-printf "function acpp() {\ngit add .;\ngit commit -m "\$1";\ngit pull;\ngit push;}" >> ~/.bashrc
-. ~/.bashrc
+printf "function acpp() {\ngit add .;\ngit commit -m "\$1";\ngit pull;\ngit push;}" >> /home/andreas/.bashrc
+. /home/andreas/.bashrc
