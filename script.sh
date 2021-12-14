@@ -23,6 +23,7 @@ PACKAGE_LIST=(
 	'discord'
 	'lutris'
 	'vlc'
+	'python3-pip'
 	'pavucontrol' # Multiple audio outputs
 	'sublime-text' # Requires dependancies
 	'onedriver' # Requires dependancies
