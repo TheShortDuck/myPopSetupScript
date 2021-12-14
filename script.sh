@@ -18,6 +18,7 @@ apt -y --allow-unauthenticated update
 PACKAGE_LIST=(
 	'gnome-tweaks'
 	'gnome-startup-applications'
+	'gnome-shell-extensions'
 	'steam'
 	'discord'
 	'lutris'
@@ -42,3 +43,11 @@ echo "${USERNAME} ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
 printf "function acpp() {\ngit add .;\ngit commit -m "\$1";\ngit pull;\ngit push;}" >> /home/andreas/.bashrc
 . /home/andreas/.bashrc
+
+
+# Multiple sound devices
+mkdir -p  home/andreas/.local/share/gnome-shell/extensions/
+cd home/andreas/.local/share/gnome-shell/extensions/
+git clone https://github.com/kgshank/gse-sound-output-device-chooser.git
+cp -r gse-sound-output-device-chooser/sound-output-device-chooser@kgshank.net .
+rm -rf "gse-sound-output-device-chooser"
